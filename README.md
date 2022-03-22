@@ -1,2 +1,2 @@
 # angular-sandbox
-This is a space fore me to practice angular
+This is a space for me to practice angular
