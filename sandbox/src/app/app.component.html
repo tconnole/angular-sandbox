@@ -1,3 +1,9 @@
-<div>Hello World!</div>
+<div class="app-container">
+    <button class="menu" mat-raised-button [matMenuTriggerFor]="components">Components</button>
+    <!-- <app-dice-roller></app-dice-roller> -->
+    <router-outlet></router-outlet>
+</div>
 
-<router-outlet></router-outlet>
+<mat-menu #components="matMenu">
+    <button mat-menu-item routerLink="dice-rollers">Dice Rollers</button>
+</mat-menu>

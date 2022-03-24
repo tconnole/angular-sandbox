@@ -1,0 +1,7 @@
+
+    <div *ngIf="(dice?.roll || dice?.roll === 0) && rolled; else emptyDice">
+        <div class="dice">{{dice?.roll}}</div>
+    </div>
+    <ng-template #emptyDice>
+        <div class="dice"></div>
+    </ng-template>

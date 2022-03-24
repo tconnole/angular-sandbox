@@ -1,0 +1,40 @@
+<div class="container">
+    <h1>Dice Rollers!</h1>
+    <h2>Coin Style Dice</h2>
+    <div class="dice-roller-container">
+        <div *ngFor="let dice of roll.dice">
+            <div class="dice-container regular">
+                <app-dice class="dice animation-flipping" [dice]="dice"></app-dice>
+            </div>
+            <div class="label">
+                <div>D{{dice.sides}}</div>
+                <div class="roll" [ngClass]="{'loading': !dice.roll}">{{dice.roll ?? ''}}</div>
+            </div>
+        </div> 
+    </div>
+    <h2>Rolling Dice</h2>
+    <div class="dice-roller-container">
+        <div *ngFor="let dice of roll.bonusDice">
+            <div class="dice-container">
+                <app-dice class="dice bonus animation-fall-in" [dice]="dice"></app-dice>
+            </div>
+            <div class="label">
+                <div>D{{dice.sides}}</div>
+                <div class="roll" [ngClass]="{'loading': !dice.roll}">{{dice.roll ?? ''}}</div>
+            </div>
+        </div> 
+    </div>
+    <h2>Bouncing Dice</h2>
+    <div class="dice-roller-container">
+        <div *ngFor="let dice of roll.penaltyDice">
+            <div class="dice-container">
+                <app-dice class="dice penalty animation-bounce" [dice]="dice"></app-dice>
+            </div>
+            <div class="label">
+                <div>D{{dice.sides}}</div>
+                <div class="roll" [ngClass]="{'loading': !dice.roll}">{{dice.roll ?? ''}}</div>
+            </div>
+        </div> 
+    </div>
+    <button (click)="rollDice()">roll!</button>
+</div>
