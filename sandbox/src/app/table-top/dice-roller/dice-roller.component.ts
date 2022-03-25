@@ -8,6 +8,9 @@ import { Dice, DiceRoll } from '../shared/table-top.model';
   styleUrls: ['./dice-roller.component.scss']
 })
 export class DiceRollerComponent implements OnInit {
+  // Might as well make a whole dice rolling app at this point
+  // TODO add form to create dice dynamically
+  // organize into sections with documentation and notes
 
   public roll: DiceRoll = {
     dice: [{
@@ -77,10 +80,3 @@ const penalty: Dice[] = [{
   }
 }
 
-// export interface Dice {
-//   sides: number;
-//   roll?: number;
-//   leadingZero?: boolean;
-//   startAtOne?: boolean;
-//   delay?: 0 | 1 | 2;
-// }

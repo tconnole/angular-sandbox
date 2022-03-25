@@ -1,9 +1,28 @@
-<div class="app-container">
-    <button class="menu" mat-raised-button [matMenuTriggerFor]="components">Components</button>
-    <!-- <app-dice-roller></app-dice-roller> -->
-    <router-outlet></router-outlet>
+<div class="app-container" [ngClass]="{'light-theme': lightTheme, 'dark-theme': !lightTheme}">
+    <div class="header">
+        <button class="menu" mat-raised-button [matMenuTriggerFor]="components">Components</button>
+        <div>Thomas Connole's Angular Sandbox</div>
+        <div class="theme-picker">
+            <span class="theme-picker-label">{{lightTheme ? 'Light Theme' : 'Dark Theme'}}</span>
+            <mat-slide-toggle [(ngModel)]="lightTheme"></mat-slide-toggle>
+        </div>
+    </div>
+    <div class="header-2">{{selectedComponent}}</div>
+    <div class="body">
+        <div class="side-nav-bar">
+            <button mat-button routerLink="dice-rollers"
+            (click)="selectedComponent = 'Dice Rollers'">
+                Dice Rollers
+            </button>
+        </div>
+        <div class="contents">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>
 
 <mat-menu #components="matMenu">
-    <button mat-menu-item routerLink="dice-rollers">Dice Rollers</button>
+    <button mat-menu-item routerLink="dice-rollers">
+        Dice Rollers
+    </button>
 </mat-menu>

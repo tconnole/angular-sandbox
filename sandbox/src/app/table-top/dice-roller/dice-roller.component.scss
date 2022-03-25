@@ -1,9 +1,9 @@
 .container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    overflow: hidden;
 }
 
 .label {
@@ -16,27 +16,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgb(231, 231, 231);
+        background-color: rgb(255, 255, 255);
         box-shadow: inset 0px 0px 4px rgb(0, 0, 0);
         border-radius: 5px;
         width: 50px;
         height: 1.2rem;
     }
-
-    .loading {
-        // color: transparent;
-        animation: load 1s 3 alternate;
-        
-        @keyframes load {
-            from {
-                background-color: rgb(172, 172, 172);
-            }
-            to {
-                background-color: rgb(218, 218, 218);
-            }
-        }
-    }
-
 }
 
 .dice-roller-container {
@@ -153,7 +138,7 @@
                     border-radius: 0.25rem;
                     top: -0.5rem;
                     right: 2rem;
-                    transform: scale(0) rotate(20deg);
+                    transform: scale(0) rotate(30deg);
                 }
                 10%{
                     border-radius: 0.25rem;
@@ -165,7 +150,7 @@
                     border-radius: 0.25rem;
                     top: 0.6rem;
                     right: 2rem;
-                    transform: scale(0.22) rotate(-20deg);
+                    transform: scale(0.22) rotate(-30deg);
                 }
                 30%{
                     border-radius: 0.25rem;
@@ -177,7 +162,7 @@
                     border-radius: 0.25rem;
                     top: 2rem;
                     right: 2rem;
-                    transform: scale(0.44) rotate(20deg);
+                    transform: scale(0.44) rotate(30deg);
                 }
                 50%{
                     border-radius: 0.25rem;
@@ -189,7 +174,7 @@
                     border-radius: 0.25rem;
                     top: 3rem;
                     right: 2rem;
-                    transform: scale(0.66) rotate(-20deg);
+                    transform: scale(0.66) rotate(-30deg);
                 }
                 70% {
                     border-radius: 0.25rem;
@@ -201,7 +186,7 @@
                     border-radius: 0.25rem;
                     top: 3.8rem;
                     right: 2rem;
-                    transform: scale(0.88) rotate(20deg);
+                    transform: scale(0.88) rotate(30deg);
                 }
                 90% {
                     border-radius: 0.25rem;
