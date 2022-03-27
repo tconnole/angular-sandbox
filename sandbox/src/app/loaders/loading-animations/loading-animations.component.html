@@ -2,7 +2,7 @@
     <div class="ascii-container">
         <h2>ascii loading bar</h2>
             <div>
-                <mat-slider [(ngModel)]="asciiPercent"></mat-slider>
+                <mat-slider (input)="asciiPercent = $event.value ?? asciiPercent"></mat-slider>
                 <span>{{asciiPercent}}</span>
             </div>
             <div>
