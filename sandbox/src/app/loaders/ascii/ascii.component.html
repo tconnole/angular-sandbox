@@ -1,0 +1,14 @@
+<div class="loading-bar row">
+    <div class="crt row">
+        <span>[</span>
+        <div [ngClass]="{'loaded': percent !== 100}" class="row">
+            <div *ngFor="let char of loaded">
+                {{char}}
+            </div>
+        </div>
+        <div *ngFor="let char of loading" class="loading">
+            {{char}}
+        </div>
+        <span>]</span>
+    </div>
+</div>

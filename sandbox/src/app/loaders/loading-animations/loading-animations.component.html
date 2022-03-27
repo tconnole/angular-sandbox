@@ -1,0 +1,22 @@
+<div class="loading-animations-container">
+    <div class="ascii-container">
+        <h2>ascii loading bar</h2>
+            <div>
+                <mat-slider [(ngModel)]="asciiPercent"></mat-slider>
+                <span>{{asciiPercent}}</span>
+            </div>
+            <div>
+                <span>Character Count: </span>
+                <input mat-input [(ngModel)]="asciiCharacterCount" type="number">
+            </div>
+            <div>
+                <span>Character: </span>
+                <input mat-input [(ngModel)]="asciiCharacter">
+            </div>
+            <app-ascii 
+                [percent]="asciiPercent"
+                [characterCount]="asciiCharacterCount ?? 20"
+                [character]="asciiCharacter">
+            </app-ascii>
+    </div>
+</div>

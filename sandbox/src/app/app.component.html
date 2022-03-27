@@ -10,9 +10,11 @@
     <div class="header-2">{{selectedComponent}}</div>
     <div class="body">
         <div class="side-nav-bar">
-            <button mat-button routerLink="dice-rollers"
-            (click)="selectedComponent = 'Dice Rollers'">
+            <button mat-button routerLink="dice-rollers">
                 Dice Rollers
+            </button>
+            <button mat-button routerLink="loading-animations">
+                Loading Animations
             </button>
         </div>
         <div class="contents">
@@ -24,5 +26,8 @@
 <mat-menu #components="matMenu">
     <button mat-menu-item routerLink="dice-rollers">
         Dice Rollers
+    </button>
+    <button mat-menu-item routerLink="loading-animations">
+        Loading Animations
     </button>
 </mat-menu>

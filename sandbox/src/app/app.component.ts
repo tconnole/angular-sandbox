@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
 
 export const Routes = new Map([
-  ['/dice-rollers', 'Dice Rollers']
+  ['/dice-rollers', 'Dice Rollers'],
+  ['/loading-animations', 'Loading Animations']
 ])
 
 @Component({
