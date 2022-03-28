@@ -17,8 +17,9 @@ export class AsciiComponent implements OnChanges {
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if(changes['percent'] || changes['characterCount'] || changes['character']) {
-      this.generateAscii();
+    if(changes['percent'] || changes['character'] || changes['characterCount']) {
+      this.characterCount = this.characterCount > 100 ? 100 : this.characterCount; 
+     this.generateAscii();
     }
   }
   public generateAscii() {
