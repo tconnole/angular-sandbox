@@ -5,6 +5,7 @@ import { LoadingAnimationsComponent } from './loading-animations/loading-animati
 import { MatSliderModule } from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import { NeonComponent } from './neon/neon.component';
 
 
 
@@ -12,6 +13,7 @@ import {MatInputModule} from '@angular/material/input';
   declarations: [
     AsciiComponent,
     LoadingAnimationsComponent,
+    NeonComponent,
   ],
   imports: [
     CommonModule,
